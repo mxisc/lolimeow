@@ -92,12 +92,30 @@ if(!isset($user_ID)) {
                                           </span>
                                           <input type="email" name="email" id="email" class="form-control form-control-sm bl0 br0 bm0" value="<?php echo $comment_author_email; ?>" placeholder="邮箱 *" tabindex="2">
                                        </div>
+                                       <!--<div class="input-group ">-->
+                                       <!--   <span class="input-group-text bl0 bm0">-->
+                                       <!--   <i class="fa fa-link"></i>-->
+                                       <!--   </span>-->
+                                       <!--   <input type="text" name="url" id="url" class="form-control form-control-sm input-form-rtr bm0" value="<?php echo $comment_author_url; ?>" placeholder="网址" size="22" tabindex="3">-->
+                                       <!--</div>-->
+                                       <!--隐私评论-->
                                        <div class="input-group ">
                                           <span class="input-group-text bl0 bm0">
                                           <i class="fa fa-link"></i>
                                           </span>
-                                          <input type="text" name="url" id="url" class="form-control form-control-sm input-form-rtr bm0" value="<?php echo $comment_author_url; ?>" placeholder="网址" size="22" tabindex="3">
+                                          <input type="text" name="url" id="url" class="form-control form-control-sm bl0 br0 bm0" value="<?php echo $comment_author_url; ?>" placeholder="网址" size="22" tabindex="3">
                                        </div>
+                                       
+                                        <div class="input-group">
+                                            <span class="input-group-text bl0 bm0">
+                                                <i class="fa fa-lock"></i>
+                                            </span>
+                                            <div class="form-control form-control-sm input-form-rtr bm0 d-flex align-items-center">
+                                                <input type="checkbox" name="private" id="private" value="1" tabindex="3" class="form-check-input me-1">
+                                                <label for="private" class="mb-0">私密评论</label>
+                                            </div>
+                                        </div>
+                                       <!---->
                                     </div> <?php endif; ?>
                                     <div class="comment-text-form">
                                        <div class="form-group">

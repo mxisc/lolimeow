@@ -19,6 +19,14 @@ require_once get_stylesheet_directory() . '/module/core/optimize.php';
 require_once get_stylesheet_directory() . '/module/core/navwalker.php';
 require_once get_stylesheet_directory() . '/module/core/bot.php';
 if( get_boxmoe('no_categoty') ) require_once get_stylesheet_directory() . '/module/core/nocategory.php';
+function save_private_comment_meta($comment_id) {
+    // 检查私密评论字段是否存在且被选中
+    if (isset($_POST['private'])) {
+        // 将布尔值 true 作为私密标记保存到评论的元数据中
+        add_comment_meta($comment_id, 'private_comment', true, true);
+    }
+}
+add_action('comment_post', 'save_private_comment_meta', 10, 1);
 
 
 
