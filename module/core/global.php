@@ -328,7 +328,7 @@ function boxmoe_load_footerlogo() {?>
 //底部信息输出
 function boxmoe_footer_info() {
 	echo '<p class="mb-0 copyright">';
-	echo 'Copyright © 2016 <a href="'.home_url().'" target="_blank">'.get_bloginfo( 'name' ).'</a>. All Rights Reserved. <br> Powered by Wordpress | Theme by
+	echo 'Copyright © 2018 <a href="'.home_url().'" target="_blank">'.get_bloginfo( 'name' ).'</a>. All Rights Reserved. <br> Powered by Wordpress | Theme by
                 <a href="https://www.boxmoe.com" target="_blank">LoLiMeow</a>';				
 	if( get_boxmoe('footer_info') ) {
 	echo '<br>'.get_boxmoe('footer_info','');	
