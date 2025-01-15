@@ -223,6 +223,7 @@
                 toggleOffCanvas();
             });
         }));
+    
 
     var theme = {
         init: function () {

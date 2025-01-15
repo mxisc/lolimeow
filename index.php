@@ -3,6 +3,7 @@
  * @package lolimeow@boxmoe themes
  * @link https://www.boxmoe.com
  */
+
 get_header(); ?>
       <section class="section-blog-breadcrumb container fadein-bottom">
         <div class="breadcrumb-head">

@@ -78,7 +78,7 @@ if(!isset($user_ID)) {
                      <a id="cancel-comment-reply-link" href="javascript:;" class="btn btn-primary btn-sm" style="display:none;">取消回复</a></h5>
                         <form id="commentform" name="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
                         <div class="row" id="comment-author-info">
-                        <div class="col-md-10 mx-auto"> <?php if (! is_user_logged_in() ):?>
+                        <div class="col-md-12 mx-auto"> <?php if (! is_user_logged_in() ):?>
                                     <div class="input-form">
                                        <div class="input-group">
                                           <span class="input-group-text input-form-rtl bm0">

@@ -333,7 +333,7 @@ function boxmoe_footer_info() {
 	if( get_boxmoe('footer_info') ) {
 	echo '<br>'.get_boxmoe('footer_info','');	
 	}
-    if( get_boxmoe('footer_time') ) {
+	if( get_boxmoe('footer_time') ) {
     echo '<br><span id="runningTime"></span>';	
     }
 	if( get_boxmoe('boxmoedataquery') ) {

@@ -1114,7 +1114,7 @@ $items = isset($_GET["items"]) ? $_GET["items"] : 'home';
 				<div class="col-lg-10 col-md-10 ml-auto mx-auto">		
 				<div class="alert alert-warning d-flex align-items-center" role="alert">
   				<span class="alert-icon"><i class="fa fa-bell"></i></span>
-   				<span class="alert-text"><strong>提示：</strong> 会员中心必须配套Erphpdown插件使用，检测网站未启用或者未安装该插件！<a href="https://www.boxmoe.com/468.html" target="_blank" style="font-weight: bold;color: #121211;font-size: 15px;">详细点击查看说明</a></span>
+   				<span class="alert-text"><strong>提示：</strong> 会员中心什么都没有!</span>
 				</div>
 				</div>
 				</div>				

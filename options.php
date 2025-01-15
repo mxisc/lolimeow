@@ -431,13 +431,13 @@ $options[] = array(
 $options[] = array(
 	'name' => __('★ 文章头部广告位', 'ui_boxmoe_com'),
 	'id' => 'ads_top',
-	'std' => '<a href="https://moekoe.cn/" target="_blank"><img src="https://cloudflare.cdnjson.com/images/2024/11/01/3333.png" style="border-radius: 10px;"></a>',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="http://cdnjson.com/images/2024/11/01/222.png" style="border-radius: 10px;"></a>',
 	'type' => 'textarea'
 	);	
 $options[] = array(
 	'name' => __('★ 文章底部广告位', 'ui_boxmoe_com'),
 	'id' => 'ads_bottom',
-	'std' => '<a href="https://moekoe.cn/" target="_blank"><img src="https://cloudflare.cdnjson.com/images/2024/11/01/3333.png" style="border-radius: 10px;"></a>',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="http://cdnjson.com/images/2024/11/01/222.png" style="border-radius: 10px;"></a>',
 	'type' => 'textarea'
 	);
 $options[] = array(

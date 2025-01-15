@@ -21,11 +21,11 @@ class widget_search extends WP_Widget {
 
         // 搜索表单 HTML
         ?>
-        <div class="widget-search-form">
-            <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                <input type="search" class="form-control" placeholder="<?php echo esc_attr__('Search …', 'boxmoe-com'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-            </form>
-        </div>
+        
+        <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+            <input type="search" class="form-control" placeholder="<?php echo esc_attr__('Search …', 'boxmoe-com'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+        </form>
+       
         <?php
 
         echo $after_widget;
