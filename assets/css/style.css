@@ -602,3 +602,5 @@ a.btn-social:hover{background-color:#e0ecfc;color:var(--box-fff)}
 .custom-widget-link-list{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;}.custom-widget-link-list .custom-link-item{margin-left:10px;margin-bottom:12px;text-align:center;width:80px;}.custom-widget-link-list .custom-link-item a{text-decoration:none;display:block;color:#333;position:relative;}.custom-widget-link-list .custom-link-item a:hover{color:#1db954;}.custom-link-icon{width:30px;height:30px;border-radius:50%;margin-bottom:5px;}.custom-widget-link-list .custom-link-name{font-size:12px;display:block;margin-top:5px;}
 .meiha {position: fixed;top: 0;right: 0;z-index: 999;width: 350px;height: 231px;pointer-events: none;background: url('../images/1kBpid.png');}
 .meiha1 {position: fixed;top: -24px;left: -37px;z-index: 999;width: 602px;height: 902px;pointer-events: none;background: url(../images/594cb6fc65645_610.png) no-repeat;background-size: 71%;}
+.snowflake {position: fixed;color: #fff;font-size: 20px;user-select: none;animation: fall linear;}
+@keyframes fall {0% { transform: translateY(-20px) rotate(0deg); }100% { transform: translateY(100vh) rotate(360deg);}}

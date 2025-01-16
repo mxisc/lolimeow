@@ -262,6 +262,9 @@ function boxmoe_load_footer() {?>
         <?php endif; ?>
         <?php if (get_boxmoe('hitokoto_on')): ?>
 <script type="text/javascript">
+  <?php if(get_boxmoe('snow')){ ?>
+    setInterval(createSnowflake, 500);
+    <?php } ?>
                     var hitokoto = function () {
                     $.get("https://v1.hitokoto.cn/?c=<?php echo get_boxmoe('hitokoto_text')?>", {},
                         function (data) {

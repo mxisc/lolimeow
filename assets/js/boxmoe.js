@@ -298,3 +298,18 @@ function displayRunningTime(text) {
     }
     setInterval(updateRunningTime, 1000);
 }
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.innerHTML = ['✳', '✴', '✻', '❉', '❅', '❆', '✻', '✼', '❇', '❈', '❊', '✥', '✺'][Math.floor(Math.random() * 13)];
+    snowflake.style.left = Math.random() * 100 + '%';
+    const size = (Math.random() * 15) + 10;
+    snowflake.style.fontSize = size + 'px';
+    snowflake.style.opacity = Math.random();
+    const duration = 5 + Math.random() * 5;
+    snowflake.style.animationDuration = duration + 's';
+    document.body.appendChild(snowflake);
+    snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+    });
+}

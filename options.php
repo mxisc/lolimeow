@@ -61,12 +61,18 @@ function optionsframework_options() {
 			));
 	
 	$options[] = array(
-		'name' => __('页面过度动画', 'ui_boxmoe_com'),
+		'name' => __('★ 页面过度动画', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_preloader',
 		'desc' => __('（开关）', 'ui_boxmoe_com'),
 		'type' => "checkbox",
 		'std' => true,
 		);
+	$options[] = array(
+		'name' => __('★ 开启网页下雪', 'ui_boxmoe_com'),
+		'id' => 'snow',
+		'type' => "checkbox",
+		'std' => false,
+		);	
 	$options[] = array(
 		'name' => __('★ 开启网页樱花飘落', 'ui_boxmoe_com'),
 		'id' => 'sakura',
@@ -80,14 +86,14 @@ function optionsframework_options() {
 		'std' => false,
 		);	
 	$options[] = array(
-		'name' => __('悼念模式', 'ui_boxmoe_com'),
+		'name' => __('★ 悼念模式', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_body_grey',
 		'desc' => __('（全站变灰）', 'ui_boxmoe_com'),
 		'type' => "checkbox",
 		'std' => false,
 		);
 	$options[] = array(
-		'name' => __('节日红灯笼', 'ui_boxmoe_com'),
+		'name' => __('★ 节日红灯笼', 'ui_boxmoe_com'),
 		'id' => 'lantern',
 		'type' => "checkbox",
 		'std' => false,
