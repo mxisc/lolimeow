@@ -15,7 +15,7 @@ get_header();
         <div class="container">
           <div class="row">
             <div class="blog-single  <?php echo boxmoe_blog_layout() ?>  fadein-bottom">
-          <?php echo get_boxmoe('ads_top');?>
+          <?php echo get_boxmoe('meal_top');?>
               <div class="post-single <?php echo boxmoe_border()?>  <?php if (is_sticky()) { echo 'sticky-post'; } ?>"><?php while (have_posts()) : the_post(); ?>
                   <?php if (is_sticky()) : ?>
                     <div class="ribbon">置顶</div>
@@ -107,7 +107,7 @@ get_header();
               </div>            
               <?php endif; ?>	
               
-                  <?php echo get_boxmoe('ads_bottom');?>
+                  <?php echo get_boxmoe('meal_bottom');?>
             </div>
           </div>  
             <?php if (get_boxmoe('blog_layout')== 'two' ): ?>

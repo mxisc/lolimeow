@@ -141,7 +141,7 @@ div.tags a:hover{color:var(--box-333) !important;-webkit-transform:translate(-1p
 .blog-sidebar .widget_categories ul li,.blog-sidebar .widget_archive ul li,.blog-sidebar .widget_pages ul li,.blog-sidebar .widget_meta ul li,.blog-sidebar .widget_recent_entries ul li,.blog-sidebar .widget_nav_menu ul li,.blog-sidebar .widget_block ul li{border-top:none;border:none;position:relative;background:#eef6fd;margin-bottom:10px;transition:0.3s;padding-top:0;border-radius:5px}
 .blog-sidebar .widget_categories ul li:hover,.blog-sidebar .widget_archive ul li:hover{background:#e9f1ff}
 .blog-sidebar .widget_categories ul li span,.blog-sidebar .widget_archive ul li span,.blog-sidebar .widget_pages ul li span,.blog-sidebar .widget_meta ul li span,.blog-sidebar .widget_recent_entries ul li span,.blog-sidebar .widget_nav_menu ul li span,.blog-sidebar .widget_block ul li span{float:right;font-size:14px;font-weight:700;padding:16px 18px}
-.widget_ads img{width:100%}
+.widget_meal img{width:100%}
 .blog-single{margin-bottom:50px;position:relative}
 .post-single{padding:30px;border-radius:var(--bs-border-radius-lg) !important;background-color:var(--box-fff);position:relative}
 .single-category{margin-bottom:15px}
