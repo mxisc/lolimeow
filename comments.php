@@ -56,7 +56,7 @@ if(!isset($user_ID)) {
 						<?php } else {?>
 				<div id="respond_com"></div>
 				<?php if (get_option('comment_registration') && !is_user_logged_in()) {?>
-				<div class="col-lg-10 col-md-10 mx-auto">
+				<div class="col-lg-11 col-md-11 mx-auto">
 				<div class="no_comment">
 				<H5 class="title-normal text-center">当前仅支持登录后发布评论</H5>
                     <div class="user-wrapper">
@@ -72,7 +72,7 @@ if(!isset($user_ID)) {
                     </div>				
 				</div>
 				</div><?php } else {?>
-                <div id="respond" class="col-lg-10 col-md-10 mx-auto">
+                <div id="respond" class="col-lg-11 col-md-11 mx-auto">
                   <h5 class="title-normal text-center" id="respond_com">
                     <i class="fa fa-commenting"></i>发表评论
                      <a id="cancel-comment-reply-link" href="javascript:;" class="btn btn-primary btn-sm" style="display:none;">取消回复</a></h5>

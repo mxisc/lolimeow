@@ -431,13 +431,13 @@ $options[] = array(
 $options[] = array(
 	'name' => __('★ 文章头部广告位', 'ui_boxmoe_com'),
 	'id' => 'meal_top',
-	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="http://cdnjson.com/images/2024/11/01/222.png" style="border-radius: 10px;"></a>',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="https://s2.loli.net/2025/01/16/vcA3P5nSZM1gI7D.png" style="border-radius: 10px;width: 100%;"></a>',
 	'type' => 'textarea'
 	);	
 $options[] = array(
 	'name' => __('★ 文章底部广告位', 'ui_boxmoe_com'),
 	'id' => 'meal_bottom',
-	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="http://cdnjson.com/images/2024/11/01/222.png" style="border-radius: 10px;"></a>',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="https://s2.loli.net/2025/01/16/Ig2SsjJVRraQCvy.png" style="border-radius: 10px;width: 100%;"></a>',
 	'type' => 'textarea'
 	);
 $options[] = array(
@@ -596,10 +596,10 @@ $options[] = array(
 	'type' => 'heading'
 );	
 $options[] = array(
-	'name' => __('★ QQ联系'),
-	'desc' => __('直接输入QQ号，留空不展现', 'ui_boxmoe_com'),
+	'name' => __('★ QQ群'),
+	'desc' => __('输入QQ群链接，留空不展现', 'ui_boxmoe_com'),
 	'id' => 'boxmoe_qq',
-	'std' => '10000',
+	'std' => 'https://jq.qq.com/?_wv=1027&k=5cvR0GN',
 	'type' => 'text');	
 $options[] = array(
 	'name' => __('★ 微信二维码'),

@@ -304,7 +304,7 @@ function boxmoe_footer_seo() {
 //底部社交输出
 function boxmoe_footer_social() {
 	if(get_boxmoe('boxmoe_qq')){
-		echo '<a href="https://wpa.qq.com/msgrd?v=3&amp;uin='.get_boxmoe('boxmoe_qq').'&amp;site=qq&amp;menu=yes" data-bs-toggle="tooltip" data-bs-placement="top" title="博主QQ" target="_blank" class="text-reset btn btn-social btn-icon">
+		echo '<a href="'.get_boxmoe('boxmoe_qq').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主QQ群" target="_blank" class="text-reset btn btn-social btn-icon">
           <i class="fa fa-qq"></i></a>';
 		}
 	if(get_boxmoe('boxmoe_wechat')){

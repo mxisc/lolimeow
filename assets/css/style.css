@@ -101,7 +101,8 @@ div.tags a:hover{color:var(--box-333) !important;-webkit-transform:translate(-1p
 .list-one .post-list-avatar:after{width:80%;height:80%;content:"";position:absolute;top:7px;left:3px;transform:rotate(45deg);z-index:-1;border-radius:4px;border:2px solid #ff00009c}
 .list-one .post-list-avatar-img,.list-one .avatar{width:55px;height:55px;-o-object-fit:cover;object-fit:cover;-webkit-clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);border:1px solid transparent}
 .list-one .post-list-content .post-content{font-size:13px;color:#353A44;letter-spacing:0.35px;font-weight:500}
-.list-one .post-title.h4{font-size:1.05rem}
+.list-one .post-title.h4{font-size:1.35rem}
+.post-list-content .title-category{margin-top: -20px;}
 .list-one .img-fluid{height:230px;width:100%;transition:all .4s cubic-bezier(.7,0,.3,1);object-fit:cover}
 .pagenav{margin-top:30px}
 .pagenav .page-link,.page-item span{margin:0 6px}
