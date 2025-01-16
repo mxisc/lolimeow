@@ -72,7 +72,13 @@ function optionsframework_options() {
 		'id' => 'sakura',
 		'type' => "checkbox",
 		'std' => false,
-		);									
+		);	
+	$options[] = array(
+		'name' => __('★ 开启樱花树', 'ui_boxmoe_com'),
+		'id' => 'sakura_tree',
+		'type' => "checkbox",
+		'std' => false,
+		);	
 	$options[] = array(
 		'name' => __('悼念模式', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_body_grey',
@@ -88,26 +94,14 @@ function optionsframework_options() {
 		);
 	$options[] = array(
 		'name' => __( '灯笼文字(1)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont1',
+		'id' => 'lanternfont2',
 		'std' => '新',
 		'class' => 'mini hidden',
 		'type' => 'text');
 	$options[] = array(
 		'name' => __( '灯笼文字(2)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont2',
+		'id' => 'lanternfont1',
 		'std' => '春',
-		'class' => 'mini hidden',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __( '灯笼文字(3)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont3',
-		'std' => '快',
-		'class' => 'mini hidden',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __( '灯笼文字(4)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont4',
-		'std' => '乐',
 		'class' => 'mini hidden',
 		'type' => 'text');
 $options[] = array(

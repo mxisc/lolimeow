@@ -70,6 +70,10 @@
       </svg>
    </div>
 	<?php } ?>
+  <?php if(get_boxmoe('sakura_tree')){ ?>
+      <div class="meiha1"></div>
+      <div class="meiha"></div>
+    <?php } ?>
   <?php echo boxmoe_load_lantern(); ?>
     <div id="boxmoe_theme_global">
       <section id="boxmoe_theme_header" class="fadein-top">

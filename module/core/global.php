@@ -228,8 +228,8 @@ function boxmoe_favicon() {
 //节日灯笼
 function boxmoe_load_lantern() {
 	if (get_boxmoe('lantern') ){?>
-<div id="wp"class="wp"><div class="xnkl"><div class="deng-box2"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont2','度')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box3"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont1','欢')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont4','春')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont3','新')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div></div>
-	<?php }else{}
+    <div id="wp" class="wp"> <div class="xnkl"> <div class="deng-box1"> <div class="deng"> <div class="xian"> </div> <div class="deng-a"> <div class="deng-b"> <div class="deng-t"> <?php echo get_boxmoe( 'lanternfont1', '春')?> </div> </div> </div> <div class="shui shui-a"> <div class="shui-c"> </div> <div class="shui-b"> </div> </div> </div> </div> <div class="deng-box"> <div class="deng"> <div class="xian"> </div> <div class="deng-a"> <div class="deng-b"> <div class="deng-t"> <?php echo get_boxmoe( 'lanternfont2', '新')?> </div> </div> </div> <div class="shui shui-a"> <div class="shui-c"> </div> <div class="shui-b"> </div> </div> </div> </div> </div>
+	<?php }
 }
 
 //logo地址
