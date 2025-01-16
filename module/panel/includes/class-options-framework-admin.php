@@ -205,8 +205,6 @@ class Options_Framework_Admin {
 			<div id="optionsframework-metabox" class="metabox-holder">
 		<div class="header-set-title">
 		<h2 class="themes-name "><i class="navon"></i><?php echo esc_html( $menu['page_title'] ); ?></h2>
-		<a href="https://www.boxmoe.com/468.html" target="_blank" rel="external nofollow" class="el-button">
-		<i class="cx cx-begin"></i> 在线文档 | 最后更新：<span id="dbox"></span></a>
 		</div>			
 				<div id="optionsframework" class="postbox">
 					<form action="options.php" method="post">
@@ -242,23 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-var boxmoe_version = function () {
-    var dboxElement = document.getElementById("dbox");
-    dboxElement.innerHTML = "获取中...";
-
-    fetch("https://doc.boxmoe.com/api/lolimeow")
-        .then(response => response.json())
-        .then(data => {
-            dboxElement.innerHTML = data.date;
-			document.getElementById("vbox").innerHTML = data.version;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            dboxElement.innerHTML = "获取失败";
-        });
-};
-
-boxmoe_version();
 
 
 </script>

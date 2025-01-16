@@ -970,22 +970,20 @@ $options[] = array(
 		 <p>6.本主题共享下载，如果用户自行下载使用，即表明用户自愿并接受本协议所有条款。 如果用户不接受本协议，请立即删除；</p>
 		', 'ui_boxmoe_com'),
 		'type' => 'info');		
-	$options[] = array(
-	    'name' => __('★ 主题信息', 'ui_boxmoe_com'), 
-		'id' => 'banquan',
-		'desc' => __('
-		 <p>当前版本：'.$VERSION.'</p>
-		 <p>最新版本：<span id="vbox"></span></p>
-		 <p>查看主题：<a href="https://www.boxmoe.com/468.html" target="_blank" rel="external nofollow" class="url">更新日志</a></p>		
-		 <p>主题QQ群：<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=YLb_jw14jGMh1q8cMwga9UZcWp6JDPsS&authKey=x8YpdYVOU%2BIyiJ8uSJ2gT9UJ%2B%2BByQjnaHTTaTjMAu9YIERV20NnM%2F7tfBB%2B39peo&noverify=0&group_code=24847519" target="_blank" rel="external nofollow" class="url">24847519</a></p>
-		', 'ui_boxmoe_com'),
-		'type' => 'info');			
-
-//拓展区结束=====================================================================================
-
-
-
-
-//-----------------------------------------------------------
-	return $options;
-}
+		$options[] = array(
+			'name' => __('★ 主题信息', 'ui_boxmoe_com'), 
+			'id' => 'banquan',
+			'desc' => __('
+			 <p>当前版本：'.$VERSION.'（阿珏酱二次开发版）</p>
+			 <p>查看主题：<a href="https://github.com/iAJue/lolimeow/commits/master/" target="_blank" rel="external nofollow" class="url">更新日志</a></p>		
+			', 'ui_boxmoe_com'),
+			'type' => 'info');			
+	
+	//拓展区结束=====================================================================================
+	
+	
+	
+	
+	//-----------------------------------------------------------
+		return $options;
+	}
