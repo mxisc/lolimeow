@@ -405,7 +405,7 @@ div.tags a:hover{color:var(--box-333) !important;-webkit-transform:translate(-1p
 #boxmoe_theme_footer{margin-top:2rem;letter-spacing:0.5px;font-size:.85rem;margin-bottom:2rem}
 #boxmoe_theme_footer,#boxmoe_theme_footer a{color:#333}
 #boxmoe_theme_footer a:hover{color:#ff4c60}
-#boxmoe_theme_footer .text-md-end a{color:#333;margin-right:5px}
+#boxmoe_theme_footer .text-md-end a{color:#333;margin-right:5px;margin-top: 3px;}
 .boxmoe_user_center{font-size:.85rem}
 .boxmoe_user_center .user-menu{padding:2rem;background:#fff;border-radius:0.75rem;margin-bottom:2rem;border:1px solid #e2e8f0}
 .user-vip .vipicon img{height:15px;align-items:center;position:relative;top:15px}
@@ -530,6 +530,22 @@ a.btn-social:hover{background-color:#e0ecfc;color:var(--box-fff)}
 #boxmoe_theme_footer .fa-github:hover{color:#22222296}
 #boxmoe_theme_footer .fa-envelope{color:#73d7fd}
 #boxmoe_theme_footer .fa-envelope:hover{color:#73d7fd8c}
+#boxmoe_theme_footer .fa-bold{color:#0EA3D9}
+#boxmoe_theme_footer .fa-bold:hover{color:#0EA3D994}
+#boxmoe_theme_footer .fa-youtube-play{color:#FF0000}
+#boxmoe_theme_footer .fa-youtube-play:hover{color:#FF000094}
+#boxmoe_theme_footer .fa-steam{color:#145386}
+#boxmoe_theme_footer .fa-steam:hover{color:#14538694}
+#boxmoe_theme_footer .fa-telegram{color:#0088CC}
+#boxmoe_theme_footer .fa-telegram:hover{color:#0088CC94}
+#boxmoe_theme_footer .fa-facebook{color:#1877F2}
+#boxmoe_theme_footer .fa-facebook:hover{color:#1877F294}
+#boxmoe_theme_footer .fa-music{color:#E60026}
+#boxmoe_theme_footer .fa-music:hover{color:#E6002694}
+#boxmoe_theme_footer .fa-twitter{color:#1DA1F2}
+#boxmoe_theme_footer .fa-twitter:hover{color:#1DA1F294}
+#boxmoe_theme_footer .fa-wordpress{color:#007396}
+#boxmoe_theme_footer .fa-wordpress:hover{color:#00739694}
 .boxmoe_user_center .avatar{height:3.5rem;width:3.5rem;border-radius:50% !important;border:2px solid #fff;box-shadow:0 3px 12px -2px rgba(0,0,0,0.35)}
 .avatar{border:1px solid var(--bs-gray-200);color:var(--bs-gray-500)}
 .floating-action-menu{position:fixed;bottom:50px;right:100px;width:80px;height:80px;z-index:999}

@@ -319,7 +319,39 @@ function boxmoe_footer_social() {
 	if(get_boxmoe('boxmoe_mail')){
 		echo '<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email='.get_boxmoe('boxmoe_mail').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主邮箱" target="_blank" class="text-reset btn btn-social btn-icon">
           <i class="fa fa-envelope"></i></a>';
-		}		
+		}
+	if(get_boxmoe('boxmoe_bilibili')){
+		echo '<a href="'.get_boxmoe('boxmoe_bilibili').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主B站" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-bold"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_twitter')){
+		echo '<a href="'.get_boxmoe('boxmoe_twitter').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Twitter" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-twitter"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_music')){
+		echo '<a href="'.get_boxmoe('boxmoe_music').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主网易云音乐" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-music"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_facebook')){
+		echo '<a href="'.get_boxmoe('boxmoe_facebook').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Facebook" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-facebook"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_youtube')){
+		echo '<a href="'.get_boxmoe('boxmoe_youtube').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Youtube" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-youtube-play"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_steam')){
+		echo '<a href="'.get_boxmoe('boxmoe_steam').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Steam" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-steam"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_telegram')){
+		echo '<a href="'.get_boxmoe('boxmoe_telegram').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Telegram" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-telegram"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_wordpress')){
+		echo '<a href="'.get_boxmoe('boxmoe_wordpress').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主WordPress" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-wordpress"></i></a>';
+		}
 }
 function boxmoe_load_footerlogo() {?>
     <a class="mb-4 mb-lg-0 d-block" href="<?php echo home_url(); ?>">
@@ -329,7 +361,7 @@ function boxmoe_load_footerlogo() {?>
 function boxmoe_footer_info() {
 	echo '<p class="mb-0 copyright">';
 	echo 'Copyright © 2016 <a href="'.home_url().'" target="_blank">'.get_bloginfo( 'name' ).'</a>. All Rights Reserved. <br> Powered by Wordpress | Theme by
-                <a href="https://www.boxmoe.com" target="_blank">LoLiMeow</a>';				
+                <a href="https://github.com/iAJue/lolimeow" target="_blank">LoLiMeow</a>';				
 	if( get_boxmoe('footer_info') ) {
 	echo '<br>'.get_boxmoe('footer_info','');	
 	}
