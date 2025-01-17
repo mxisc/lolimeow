@@ -306,7 +306,7 @@ function createSnowflake() {
     const size = (Math.random() * 15) + 10;
     snowflake.style.fontSize = size + 'px';
     snowflake.style.opacity = Math.random();
-    const duration = 5 + Math.random() * 5;
+    const duration = 10 + Math.random() * 30;
     snowflake.style.animationDuration = duration + 's';
     document.body.appendChild(snowflake);
     snowflake.addEventListener('animationend', () => {
