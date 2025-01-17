@@ -59,13 +59,19 @@ function optionsframework_options() {
 				'border' => __('线条边框效果', 'ui_boxmoe_com'),
 				'shadow' => __('阴影边框效果', 'ui_boxmoe_com')
 			));
-	
 	$options[] = array(
 		'name' => __('★ 页面过度动画', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_preloader',
 		'desc' => __('（开关）', 'ui_boxmoe_com'),
 		'type' => "checkbox",
 		'std' => true,
+		);
+	$options[] = array(
+		'name' => __('★ 开启看板娘', 'ui_boxmoe_com'),
+		'id' => 'loli',
+		'desc' => __('（开启后看板娘会出现在页面左下角）', 'ui_boxmoe_com'),
+		'type' => "checkbox",
+		'std' => false,
 		);
 	$options[] = array(
 		'name' => __('★ 开启网页下雪', 'ui_boxmoe_com'),

@@ -246,6 +246,9 @@ function boxmoe_logo(){
 function boxmoe_load_scripts_and_styles() {
     wp_enqueue_style('theme-style', boxmoe_themes_dir() . '/assets/css/style.css', array(), null, false);
     wp_enqueue_style('theme-emoji-style', boxmoe_themes_dir() . '/assets/emoji/src/css/jquery.emoji.css', array(), null, false);
+    if(get_boxmoe('loli')){
+        wp_enqueue_style('theme-live2d-style', 'https://log.moejue.cn/live2d/assets/waifu.css', array(), null, false);
+    }
     wp_enqueue_script('custom-jquery', boxmoe_themes_dir() . '/assets/js/lib/jquery.min.js', array(), null, false);
     wp_enqueue_script('pjax', boxmoe_themes_dir() . '/assets/js/lib/jquery.pjax.min.js', array('custom-jquery'), null, false);
 }
@@ -257,6 +260,11 @@ function boxmoe_load_footer() {?>
         <script src="<?php echo boxmoe_themes_dir();?>/assets/emoji/src/js/emoji.list.js" type="text/javascript"></script>
         <script src="<?php echo get_template_directory_uri();?>/assets/js/comments.js" type="text/javascript"></script>
         <script src="<?php echo boxmoe_themes_dir();?>/assets/js/boxmoe.js" type="text/javascript" id="boxmoe_script"></script>	
+        <?php if(get_boxmoe('loli')){ ?>
+        <script src="https://log.moejue.cn/live2d/assets/waifu-tips.js"></script>
+        <script src="https://log.moejue.cn/live2d/assets/live2d.js"></script>
+        <script type="text/javascript">initModel("https://log.moejue.cn/live2d/assets/")
+        </script><?php } ?>
         <?php if (get_boxmoe('sakura')): ?>
 <script src="<?php echo boxmoe_themes_dir();?>/assets/js/lib/sakura.js"></script>
         <?php endif; ?>
