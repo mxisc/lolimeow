@@ -44,6 +44,8 @@ preg_match('/vmid=(\d+)/', $content, $matches);
 if (!empty($matches)) {
     $vmid = $matches[1];
     $content = preg_replace('/vmid=' . $vmid . '/', '', $content);
+}else{
+    exit('数据格式错误');
 }
 
 $current_page = isset($_GET['pn']) ? (int) $_GET['pn'] : 1;
@@ -74,7 +76,7 @@ function bangumi_pagination($total_pages, $current_page) {
              <?php foreach ($bangumi_list as $bangumi): ?>
                 <div class="bangumi-card">
                 <a href="<?php echo esc_url($bangumi['url']); ?>" target="_blank">
-                    <img src="https://image.baidu.com/search/down?url=<?php echo esc_url($bangumi['cover']); ?>" alt="<?php echo esc_attr($bangumi['title']); ?>" class="bangumi-cover">
+                    <img src="<?php echo esc_url($bangumi['cover']); ?>@308w_410h_1c.avif" alt="<?php echo esc_attr($bangumi['title']); ?>" referrerpolicy="no-referrer" class="bangumi-cover">
                     <h3 class="bangumi-title"><?php echo esc_html($bangumi['title']); ?></h3>
                 </a>
                 </div>
