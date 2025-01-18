@@ -55,7 +55,7 @@ $total_pages = ceil($bangumi_data['total'] / 25);
 
 function bangumi_pagination($total_pages, $current_page) {
     for ($i = 1; $i <= $total_pages; $i++) {
-        echo '<li class="page-item ' . ($i == $current_page ? 'active' : '') . '"><a class="page-link" href="./Anime/?pn=' . $i .'">' . $i . '</a></li>';
+        echo '<li class="page-item ' . ($i == $current_page ? 'active' : '') . '"><a class="page-link" href="/Anime/?pn=' . $i .'">' . $i . '</a></li>';
     }
 }
 

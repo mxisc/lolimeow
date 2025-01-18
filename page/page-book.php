@@ -24,7 +24,7 @@ $total_pages = ceil(count($json_data) / $items_per_page);
 
 function bangumi_pagination($total_pages, $current_page) {
     for ($i = 1; $i <= $total_pages; $i++) {
-        echo '<li class="page-item ' . ($i == $current_page ? 'active' : '') . '"><a class="page-link" href="./book/?pn=' . $i .'">' . $i . '</a></li>';
+        echo '<li class="page-item ' . ($i == $current_page ? 'active' : '') . '"><a class="page-link" href="/book/?pn=' . $i .'">' . $i . '</a></li>';
     }
 }
 
