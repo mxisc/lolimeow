@@ -59,55 +59,61 @@ function optionsframework_options() {
 				'border' => __('线条边框效果', 'ui_boxmoe_com'),
 				'shadow' => __('阴影边框效果', 'ui_boxmoe_com')
 			));
-	
 	$options[] = array(
-		'name' => __('页面过度动画', 'ui_boxmoe_com'),
+		'name' => __('★ 页面过度动画', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_preloader',
 		'desc' => __('（开关）', 'ui_boxmoe_com'),
 		'type' => "checkbox",
 		'std' => true,
 		);
 	$options[] = array(
+		'name' => __('★ 开启看板娘', 'ui_boxmoe_com'),
+		'id' => 'loli',
+		'desc' => __('（开启后看板娘会出现在页面左下角）', 'ui_boxmoe_com'),
+		'type' => "checkbox",
+		'std' => false,
+		);
+	$options[] = array(
+		'name' => __('★ 开启网页下雪', 'ui_boxmoe_com'),
+		'id' => 'snow',
+		'type' => "checkbox",
+		'std' => false,
+		);	
+	$options[] = array(
 		'name' => __('★ 开启网页樱花飘落', 'ui_boxmoe_com'),
 		'id' => 'sakura',
 		'type' => "checkbox",
 		'std' => false,
-		);									
+		);	
 	$options[] = array(
-		'name' => __('悼念模式', 'ui_boxmoe_com'),
+		'name' => __('★ 开启樱花树', 'ui_boxmoe_com'),
+		'id' => 'sakura_tree',
+		'type' => "checkbox",
+		'std' => false,
+		);	
+	$options[] = array(
+		'name' => __('★ 悼念模式', 'ui_boxmoe_com'),
 		'id' => 'boxmoe_body_grey',
 		'desc' => __('（全站变灰）', 'ui_boxmoe_com'),
 		'type' => "checkbox",
 		'std' => false,
 		);
 	$options[] = array(
-		'name' => __('节日红灯笼', 'ui_boxmoe_com'),
+		'name' => __('★ 节日红灯笼', 'ui_boxmoe_com'),
 		'id' => 'lantern',
 		'type' => "checkbox",
 		'std' => false,
 		);
 	$options[] = array(
 		'name' => __( '灯笼文字(1)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont1',
+		'id' => 'lanternfont2',
 		'std' => '新',
 		'class' => 'mini hidden',
 		'type' => 'text');
 	$options[] = array(
 		'name' => __( '灯笼文字(2)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont2',
+		'id' => 'lanternfont1',
 		'std' => '春',
-		'class' => 'mini hidden',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __( '灯笼文字(3)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont3',
-		'std' => '快',
-		'class' => 'mini hidden',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __( '灯笼文字(4)', 'ui_boxmoe_com' ),
-		'id' => 'lanternfont4',
-		'std' => '乐',
 		'class' => 'mini hidden',
 		'type' => 'text');
 $options[] = array(
@@ -430,14 +436,14 @@ $options[] = array(
 	);	
 $options[] = array(
 	'name' => __('★ 文章头部广告位', 'ui_boxmoe_com'),
-	'id' => 'ads_top',
-	'std' => '<a href="https://moekoe.cn/" target="_blank"><img src="https://cloudflare.cdnjson.com/images/2024/11/01/3333.png" style="border-radius: 10px;"></a>',
+	'id' => 'meal_top',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="https://s2.loli.net/2025/01/16/vcA3P5nSZM1gI7D.png" style="border-radius: 10px;width: 100%;"></a>',
 	'type' => 'textarea'
 	);	
 $options[] = array(
 	'name' => __('★ 文章底部广告位', 'ui_boxmoe_com'),
-	'id' => 'ads_bottom',
-	'std' => '<a href="https://moekoe.cn/" target="_blank"><img src="https://cloudflare.cdnjson.com/images/2024/11/01/3333.png" style="border-radius: 10px;"></a>',
+	'id' => 'meal_bottom',
+	'std' => '<a href="https://moekoe.cn/" tabindex="0" target="_blank"><img src="https://s2.loli.net/2025/01/16/Ig2SsjJVRraQCvy.png" style="border-radius: 10px;width: 100%;"></a>',
 	'type' => 'textarea'
 	);
 $options[] = array(
@@ -595,18 +601,11 @@ $options[] = array(
 	'name' => __( '社交设置', 'ui_boxmoe_com' ),
 	'type' => 'heading'
 );	
-//$options[] = array(
-//	'name' => __('★ 文章打赏二维码'),
-//	'desc' => __('（先记着下版出，直接上传图片，留空不展现）', 'ui_boxmoe_com'),
-//	'id' => 'boxmoe_dayegivemesomemoney',
-//	'std' => $imagepath.'dayegivemesomemoney.jpg',
-//	'type' => 'upload');
 $options[] = array(
-	'name' => __('★ QQ联系'),
-	'desc' => __('直接输入QQ号，留空不展现', 'ui_boxmoe_com'),
+	'name' => __('★ QQ群'),
+	'desc' => __('输入QQ群链接，留空不展现', 'ui_boxmoe_com'),
 	'id' => 'boxmoe_qq',
-	'std' => '10000',
-	'class' => 'mini',
+	'std' => 'https://jq.qq.com/?_wv=1027&k=5cvR0GN',
 	'type' => 'text');	
 $options[] = array(
 	'name' => __('★ 微信二维码'),
@@ -618,19 +617,66 @@ $options[] = array(
 	'name' => __('★ Email邮箱'),
 	'desc' => __('直接输入邮箱，留空不展现。', 'ui_boxmoe_com'),
 	'id' => 'boxmoe_mail',
-	'class' => 'mini',
 	'type' => 'text');	
 $options[] = array(
 	'name' => __('★ Github'),
 	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
 	'id' => 'boxmoe_github',
-	'std' => 'https://www.boxmoe.com',
+	'std' => 'https://moejue.cn/',
 	'type' => 'text');
 $options[] = array(
 	'name' => __('★ 微博'),
 	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
 	'id' => 'boxmoe_weibo',
-	'std' => 'https://www.boxmoe.com',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ 哔哩哔哩'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_bilibili',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ Twitter'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_twitter',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ 网易云音乐'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_music',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ Facebook'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_facebook',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ Youtube'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_youtube',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ Steam'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_steam',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ Telegram'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_telegram',
+	'std' => 'https://moejue.cn/',
+	'type' => 'text');
+$options[] = array(
+	'name' => __('★ WordPress'),
+	'desc' => __('直接输入链接，留空不展现', 'ui_boxmoe_com'),
+	'id' => 'boxmoe_wordpress',
+	'std' => 'https://moejue.cn/',
 	'type' => 'text');
 //==========================================================================================
 $options[] = array(
@@ -936,22 +982,20 @@ $options[] = array(
 		 <p>6.本主题共享下载，如果用户自行下载使用，即表明用户自愿并接受本协议所有条款。 如果用户不接受本协议，请立即删除；</p>
 		', 'ui_boxmoe_com'),
 		'type' => 'info');		
-	$options[] = array(
-	    'name' => __('★ 主题信息', 'ui_boxmoe_com'), 
-		'id' => 'banquan',
-		'desc' => __('
-		 <p>当前版本：'.$VERSION.'</p>
-		 <p>最新版本：<span id="vbox"></span></p>
-		 <p>查看主题：<a href="https://www.boxmoe.com/468.html" target="_blank" rel="external nofollow" class="url">更新日志</a></p>		
-		 <p>主题QQ群：<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=YLb_jw14jGMh1q8cMwga9UZcWp6JDPsS&authKey=x8YpdYVOU%2BIyiJ8uSJ2gT9UJ%2B%2BByQjnaHTTaTjMAu9YIERV20NnM%2F7tfBB%2B39peo&noverify=0&group_code=24847519" target="_blank" rel="external nofollow" class="url">24847519</a></p>
-		', 'ui_boxmoe_com'),
-		'type' => 'info');			
-
-//拓展区结束=====================================================================================
-
-
-
-
-//-----------------------------------------------------------
-	return $options;
-}
+		$options[] = array(
+			'name' => __('★ 主题信息', 'ui_boxmoe_com'), 
+			'id' => 'banquan',
+			'desc' => __('
+			 <p>当前版本：'.$VERSION.'（阿珏酱二次开发版）</p>
+			 <p>查看主题：<a href="https://github.com/iAJue/lolimeow/commits/master/" target="_blank" rel="external nofollow" class="url">更新日志</a></p>		
+			', 'ui_boxmoe_com'),
+			'type' => 'info');			
+	
+	//拓展区结束=====================================================================================
+	
+	
+	
+	
+	//-----------------------------------------------------------
+		return $options;
+	}

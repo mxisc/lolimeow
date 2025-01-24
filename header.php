@@ -1,30 +1,17 @@
 <?php
+// include_once(__DIR__ . '/cache.php'); 
 /**
  * @package lolimeow@boxmoe themes
  * @link https://www.boxmoe.com
  */
 ?>
 <!--
-                   _ooOoo_
-                  o8888888o
-                  88" . "88
-                  (| -_- |)
-                  O\  =  /O
-               ____/`---'\____
-             .'  \\|     |//  `.
-            /  \\|||  :  |||//  \
-           /  _||||| -:- |||||-  \
-           |   | \\\  -  /// |   |
-           | \_|  ''\---/''  |   |
-           \  .-\__  `-`  ___/-. /
-         ___`. .'  /--.--\  `. . __
-      ."" '<  `.___\_<|>_/___.'  >'"".
-     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
-     \  \ `-.   \_ __\ /__ _/   .-` /  /
-======`-.____`-.___\_____/___.-`____.-'======
-                   `=---='
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    佛祖保佑       永不宕机     永无BUG
+                ~~~~~~~  ~~~~~~~
+              ~~~~(╯°□°）╯︵ ┻━┻~~~~
+           ~~~~~~~~ (つ ◕_◕ )つ ~~~~~~~~~
+      ~~~~~~愿代码有爱 永无BUG~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 (•̀ᴗ•́)و ̑̑加油！
 -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -83,6 +70,10 @@
       </svg>
    </div>
 	<?php } ?>
+  <?php if(get_boxmoe('sakura_tree')){ ?>
+      <div class="meiha1"></div>
+      <div class="meiha"></div>
+    <?php } ?>
   <?php echo boxmoe_load_lantern(); ?>
     <div id="boxmoe_theme_global">
       <section id="boxmoe_theme_header" class="fadein-top">

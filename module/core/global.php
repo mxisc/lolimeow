@@ -228,8 +228,8 @@ function boxmoe_favicon() {
 //节日灯笼
 function boxmoe_load_lantern() {
 	if (get_boxmoe('lantern') ){?>
-<div id="wp"class="wp"><div class="xnkl"><div class="deng-box2"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont2','度')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box3"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont1','欢')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont4','春')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t"><?php echo get_boxmoe('lanternfont3','新')?></div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div></div>
-	<?php }else{}
+    <div id="wp" class="wp"> <div class="xnkl"> <div class="deng-box1"> <div class="deng"> <div class="xian"> </div> <div class="deng-a"> <div class="deng-b"> <div class="deng-t"> <?php echo get_boxmoe( 'lanternfont1', '春')?> </div> </div> </div> <div class="shui shui-a"> <div class="shui-c"> </div> <div class="shui-b"> </div> </div> </div> </div> <div class="deng-box"> <div class="deng"> <div class="xian"> </div> <div class="deng-a"> <div class="deng-b"> <div class="deng-t"> <?php echo get_boxmoe( 'lanternfont2', '新')?> </div> </div> </div> <div class="shui shui-a"> <div class="shui-c"> </div> <div class="shui-b"> </div> </div> </div> </div> </div>
+	<?php }
 }
 
 //logo地址
@@ -246,6 +246,9 @@ function boxmoe_logo(){
 function boxmoe_load_scripts_and_styles() {
     wp_enqueue_style('theme-style', boxmoe_themes_dir() . '/assets/css/style.css', array(), null, false);
     wp_enqueue_style('theme-emoji-style', boxmoe_themes_dir() . '/assets/emoji/src/css/jquery.emoji.css', array(), null, false);
+    if(get_boxmoe('loli')){
+        wp_enqueue_style('theme-live2d-style', 'https://log.moejue.cn/live2d/assets/waifu.css', array(), null, false);
+    }
     wp_enqueue_script('custom-jquery', boxmoe_themes_dir() . '/assets/js/lib/jquery.min.js', array(), null, false);
     wp_enqueue_script('pjax', boxmoe_themes_dir() . '/assets/js/lib/jquery.pjax.min.js', array('custom-jquery'), null, false);
 }
@@ -257,11 +260,17 @@ function boxmoe_load_footer() {?>
         <script src="<?php echo boxmoe_themes_dir();?>/assets/emoji/src/js/emoji.list.js" type="text/javascript"></script>
         <script src="<?php echo get_template_directory_uri();?>/assets/js/comments.js" type="text/javascript"></script>
         <script src="<?php echo boxmoe_themes_dir();?>/assets/js/boxmoe.js" type="text/javascript" id="boxmoe_script"></script>	
+        <?php if(get_boxmoe('loli')){ ?>
+        <script src="https://log.moejue.cn/live2d/assets/waifu-tips.js"></script>
+        <script src="https://log.moejue.cn/live2d/assets/live2d.js"></script><?php } ?>
         <?php if (get_boxmoe('sakura')): ?>
 <script src="<?php echo boxmoe_themes_dir();?>/assets/js/lib/sakura.js"></script>
         <?php endif; ?>
         <?php if (get_boxmoe('hitokoto_on')): ?>
 <script type="text/javascript">
+  <?php if(get_boxmoe('snow')){ ?>
+    setInterval(createSnowflake, 500);
+    <?php } ?>
                     var hitokoto = function () {
                     $.get("https://v1.hitokoto.cn/?c=<?php echo get_boxmoe('hitokoto_text')?>", {},
                         function (data) {
@@ -270,7 +279,13 @@ function boxmoe_load_footer() {?>
                     };
                     if ($("#hitokoto").length) {
                         hitokoto();
-                        $(document).on("pjax:complete", function () { hitokoto();initEmoji(); });
+                        $(document).on("pjax:complete", function () {
+                            hitokoto();
+                            initEmoji();
+                            <?php if(get_boxmoe('loli')){ ?>
+                            initLive2d();
+                            <?php } ?>
+                        });
                     }
                     var initEmoji = function () {
                         $("#btn").click(function () {
@@ -284,7 +299,11 @@ function boxmoe_load_footer() {?>
                         });
                     };initEmoji();
                     <?php if( get_boxmoe('footer_time') ) {
-                    echo 'displayRunningTime("'.get_boxmoe('footer_time','').'")';}?>
+                    echo 'displayRunningTime("'.get_boxmoe('footer_time','').'");';}?>
+                    <?php if(get_boxmoe('loli')){ ?>
+                        var initLive2d = function(){ initModel("https://log.moejue.cn/live2d/assets/"); };
+                        initLive2d();
+                    <?php } ?>
                 </script>
     <?php endif; ?>
     <?php }   
@@ -301,7 +320,7 @@ function boxmoe_footer_seo() {
 //底部社交输出
 function boxmoe_footer_social() {
 	if(get_boxmoe('boxmoe_qq')){
-		echo '<a href="https://wpa.qq.com/msgrd?v=3&amp;uin='.get_boxmoe('boxmoe_qq').'&amp;site=qq&amp;menu=yes" data-bs-toggle="tooltip" data-bs-placement="top" title="博主QQ" target="_blank" class="text-reset btn btn-social btn-icon">
+		echo '<a href="'.get_boxmoe('boxmoe_qq').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主QQ群" target="_blank" class="text-reset btn btn-social btn-icon">
           <i class="fa fa-qq"></i></a>';
 		}
 	if(get_boxmoe('boxmoe_wechat')){
@@ -319,7 +338,39 @@ function boxmoe_footer_social() {
 	if(get_boxmoe('boxmoe_mail')){
 		echo '<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email='.get_boxmoe('boxmoe_mail').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主邮箱" target="_blank" class="text-reset btn btn-social btn-icon">
           <i class="fa fa-envelope"></i></a>';
-		}		
+		}
+	if(get_boxmoe('boxmoe_bilibili')){
+		echo '<a href="'.get_boxmoe('boxmoe_bilibili').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主B站" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-bold"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_twitter')){
+		echo '<a href="'.get_boxmoe('boxmoe_twitter').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Twitter" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-twitter"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_music')){
+		echo '<a href="'.get_boxmoe('boxmoe_music').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主网易云音乐" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-music"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_facebook')){
+		echo '<a href="'.get_boxmoe('boxmoe_facebook').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Facebook" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-facebook"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_youtube')){
+		echo '<a href="'.get_boxmoe('boxmoe_youtube').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Youtube" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-youtube-play"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_steam')){
+		echo '<a href="'.get_boxmoe('boxmoe_steam').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Steam" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-steam"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_telegram')){
+		echo '<a href="'.get_boxmoe('boxmoe_telegram').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主Telegram" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-telegram"></i></a>';
+		}
+	if(get_boxmoe('boxmoe_wordpress')){
+		echo '<a href="'.get_boxmoe('boxmoe_wordpress').'" data-bs-toggle="tooltip" data-bs-placement="top" title="博主WordPress" target="_blank" class="text-reset btn btn-social btn-icon">
+          <i class="fa fa-wordpress"></i></a>';
+		}
 }
 function boxmoe_load_footerlogo() {?>
     <a class="mb-4 mb-lg-0 d-block" href="<?php echo home_url(); ?>">
@@ -333,7 +384,7 @@ function boxmoe_footer_info() {
 	if( get_boxmoe('footer_info') ) {
 	echo '<br>'.get_boxmoe('footer_info','');	
 	}
-    if( get_boxmoe('footer_time') ) {
+	if( get_boxmoe('footer_time') ) {
     echo '<br><span id="runningTime"></span>';	
     }
 	if( get_boxmoe('boxmoedataquery') ) {

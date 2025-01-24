@@ -15,17 +15,17 @@
     </figure>
   </div>
   <div class="post-list-content col-lg-7 col-xl-7 col-md-12 col-12">
-    <div class="category">
-      <div class="tags">
-        <?php $category = get_the_category(); if($category[0]) { echo '
-        <a href="'.get_category_link($category[0]->term_id ).'" title="查看《'.$category[0]->cat_name.'》下的所有文章 " rel="category tag" '. _post_target_blank().'>
-        <i class="tagfa fa fa-dot-circle-o"></i>'.$category[0]->cat_name.'</a>'; };?>
-      </div>
-    </div>
-    <div class="mt-2 mb-2">
+    <div class="title-category">
       <h3 class="post-title h4">
         <a <?php echo _post_target_blank() ?> href="<?php echo get_permalink() ?>" title="<?php echo get_the_title().get_the_subtitle(false).boxmoe_connector().get_bloginfo('name')?>" class="text-reset"><?php echo get_the_title().get_the_subtitle() ?></a>
       </h3>
+      <div class="category mb-2">
+        <div class="tags">
+          <?php $category = get_the_category(); if($category[0]) { echo '
+          <a href="'.get_category_link($category[0]->term_id ).'" title="查看《'.$category[0]->cat_name.'》下的所有文章 " rel="category tag" '. _post_target_blank().'>
+          <i class="tagfa fa fa-dot-circle-o"></i>'.$category[0]->cat_name.'</a>'; };?>
+        </div>
+      </div>
       <p class="post-content"><?php echo _get_excerpt() ?></p>
     </div>
     <div class="post-meta align-items-center">

@@ -223,6 +223,7 @@
                 toggleOffCanvas();
             });
         }));
+    
 
     var theme = {
         init: function () {
@@ -297,3 +298,19 @@ function displayRunningTime(text) {
     }
     setInterval(updateRunningTime, 1000);
 }
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.innerHTML = ['✳', '✴', '✻', '❉', '❅', '❆', '✻', '✼', '❇', '❈', '❊', '✥', '✺'][Math.floor(Math.random() * 13)];
+    snowflake.style.left = Math.random() * 100 + '%';
+    const size = (Math.random() * 15) + 10;
+    snowflake.style.fontSize = size + 'px';
+    snowflake.style.opacity = Math.random();
+    const duration = 10 + Math.random() * 30;
+    snowflake.style.animationDuration = duration + 's';
+    document.body.appendChild(snowflake);
+    snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+    });
+}
+console.clear && console.clear();console.log("%c   %c少女祈祷~永无BUG", "padding:190px 200px 1500px;margin-left:100px;background:url('https://www.moekoe.cn/static/images/girlbg.png') no-repeat;background-size:100%;","color: pink; font-size: 20px");console.log("%c秋名山上行人稀，常有车手较高低。\n如今车道依旧在，不见当年老司机！"," color:#000;font-weight:bold;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:2.1em");console.log("%c%c站长%c阿珏", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#3fa9f5;line-height:28px;font-size:16px;");console.log("%c%cBlog%chttps://MoeJue.cn", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#ff9900;line-height:28px;font-size:16px;");console.log("%c%c社区Q群%c712473912", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#008000;line-height:28px;font-size:16px;");console.log("%c%c滑稽警告%c再来偷源码&文章，劳资打死你!", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#f00;font-weight:bold;line-height:28px;font-size:16px;");

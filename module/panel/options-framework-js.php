@@ -23,18 +23,6 @@ jQuery(document).ready(function() {
 	if (jQuery('#lantern:checked').val() !== undefined) {
 		jQuery('#section-lanternfont2').show();
 	}
-	jQuery('#lantern').click(function() {
-  		jQuery('#section-lanternfont3').fadeToggle(400);
-	});
-	if (jQuery('#lantern:checked').val() !== undefined) {
-		jQuery('#section-lanternfont3').show();
-	}
-	jQuery('#lantern').click(function() {
-  		jQuery('#section-lanternfont4').fadeToggle(400);
-	});
-	if (jQuery('#lantern:checked').val() !== undefined) {
-		jQuery('#section-lanternfont4').show();
-	}
 	jQuery('#gravatar_onoff').click(function() {
   		jQuery('#section-gravatar_url').fadeToggle(400);
 	});

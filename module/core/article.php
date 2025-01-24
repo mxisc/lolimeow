@@ -150,7 +150,7 @@ return 200;
 add_filter( 'excerpt_length', 'custom_excerpt_length');
 
 //文章、评论内容缩短
-function _get_excerpt($limit = 60, $after = '...') { 
+function _get_excerpt($limit = 80, $after = '...') { 
 	$excerpt = get_the_excerpt();
 	if (mb_strlen($excerpt) > $limit) {
 		return _str_cut(strip_tags($excerpt), 0, $limit, $after);

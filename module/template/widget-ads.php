@@ -2,7 +2,7 @@
 class widget_ads extends WP_Widget {
 
 	function __construct(){
-		parent::__construct( 'widget_ads', 'Boxmoe侧栏广告', array( 'classname' => 'widget_ads' ) );
+		parent::__construct( 'widget_ads', 'Boxmoe侧栏广告', array( 'classname' => 'widget_meal' ) );
 	}
 
 	function widget( $args, $instance ) {
