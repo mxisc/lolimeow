@@ -40,7 +40,7 @@ class widget_githubrepos extends WP_Widget {
                 echo '<div class="repo-name">'.$repo->name.'</div>';
                 echo '<div class="repo-desc">'.($repo->description ? $repo->description : '暂无描述').'</div>';
                 echo '<div class="repo-meta">';
-                echo '<span class="updated" title="最后更新时间"><i class="fa fa-clock-o"></i> '.date('Y-m-d', strtotime($repo->updated_at)).'</span>';
+                echo '<span class="updated" title="'.date('Y-m-d', strtotime($repo->updated_at)).'"><i class="fa fa-clock-o"></i> '.human_time_diff(strtotime($repo->updated_at)).'前</span>';
                 echo '<span class="stars" title="Star数"><i class="fa fa-star"></i> '.$repo->stargazers_count.'</span>';
                 echo '<span class="forks" title="Fork数"><i class="fa fa-code-fork"></i> '.$repo->forks_count.'</span>';
                 echo '<span class="language" title="主要编程语言"><i class="fa fa-code"></i> '.($repo->language ? $repo->language : 'other').'</span>';

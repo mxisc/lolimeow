@@ -12,7 +12,8 @@ $widgets = array(
 	'tags',
 	'links',
 	'search',
-    'githubrepos'
+    'githubrepos',
+	'githubactivities'
 
 );
 
