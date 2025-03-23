@@ -11,7 +11,9 @@ $widgets = array(
 	'archive',
 	'tags',
 	'links',
-	'search'
+	'search',
+    'githubrepos'
+
 );
 
 if( !get_boxmoe('comments_off') ){
