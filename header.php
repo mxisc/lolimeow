@@ -1,5 +1,4 @@
 <?php
-// include_once(__DIR__ . '/cache.php'); 
 /**
  * @package lolimeow@boxmoe themes
  * @link https://www.boxmoe.com
