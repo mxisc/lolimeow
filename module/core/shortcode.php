@@ -24,7 +24,7 @@ function h2down_shortcode( $attr , $content = '') {
 add_shortcode('downloadbtn', 'downloadbtn_shortcode');  
 function downloadbtn_shortcode( $attr , $content = ' ') {
 	extract( shortcode_atts( array('link' => ''), $attr ) );
-    $out ='<a href="'.esc_attr($attr['link']).'" rel="noopener" target="_blank" class="download_btn btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="该资源来源于网络如有侵权,请联系删除." data-container="body" data-animation="true">'.$content.'</a>';  
+    $out ='<a href="'.esc_attr($attr['link']).'" rel="noopener" target="_blank" class="download_btn btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-container="body" data-animation="true">'.$content.'</a>';
     return $out;  
 }
 
